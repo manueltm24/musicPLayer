@@ -27,6 +27,7 @@
                   </VBox>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" onAction="#play" text="PLay" />
             <Button mnemonicParsing="false" onAction="#llenarListViewAlbums" prefHeight="26.0" prefWidth="124.0" text="Llenar Albums" />
          </children>
       </VBox>
