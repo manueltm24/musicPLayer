@@ -30,6 +30,12 @@ public class playerControladora {
     int max=leerArchivosMP3Carpeta(ubicacionCarpeta).size();
     int min=1;
 
+    @FXML
+    public void initialize() {
+        //REPRODUCE CANCION AL INICIAR PROGRAMA
+        mp3(null).play();
+    }
+
 
 
 
@@ -65,12 +71,15 @@ public class playerControladora {
         //CHEQUIAR FUNCION OJO!!
         String cancionSeleccionada = listviewCanciones.getSelectionModel().getSelectedItems().toString();
         String nuevaCadena = leerNombrePath(leerArchivosMP3Carpeta(ubicacionCarpeta), EliminaCaracteres(cancionSeleccionada,"[]"));
+
         if(nuevaCadena!=null){
+            //SI SELECCIONAS CANCION LA REPRODUCE
             mp.stop();
             mp3(nuevaCadena).play();
         }
         else{
-            mp3(null).play();
+            //SI NO HAY CANCION SELECCIONADA
+            System.out.println("SELECCION UNA CANCION");
         }
 
 
